@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleidentificacion.css') }}"/>
+    <link rel="icon" href="../static/logo1.1sinfondo.png">
+    <title>LogIn</title>
+    
+</head>
+
+<body>
+    <form class="form-register" action="{{url_for('resultshash')}}" method='POST'> 
+        <h4>LogIn</h4>
+        <input class="controls"type="text"  name="Nombre"   placeholder="Introduzca su nombre">
+        <input class="controls"type="password"  name="Contrasena"   placeholder="Introduzca la contraseña">
+        <input class="button"type="submit" value="LogIn">
+        <p><a href="{{url_for('home')}}">Volver al menú principal</a></p>
+
+    </form>
+</body>
+</html>

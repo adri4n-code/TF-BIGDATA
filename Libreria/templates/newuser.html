@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleidentificacion.css') }}"/>
+    <link rel="icon" href="../static/logo1.1sinfondo.png">
+    
+</head>
+<body>
+    <header>
+        <h1>Aplicació web amb base de dades (M02-UF3-AC4)</h1>
+    </header>
+    <main>
+        {% if login %}
+        <p >LOGIN CORRECTO</p>
+        {% else %}
+        <p >LOGIN INCORRECTO</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>ETPX 2022-2023 - AdriánFR</p>
+    </footer>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='webstyle.css') }}"/>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="../static/logo1.1sinfondo.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../static/logo1.1sinfondo.png">
+          <img src="../static/logo1.1sinfondo.png"alt="Logo" width="100px"height="75">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('funcionalidad') }}">Añadir Libro<span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('funcionalidadborrar') }}">Borrar Libro</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('funcionalidaddb') }}">Ver Base de Datos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('funcionalidadbuscar') }}">Buscar Libro</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    
+      <form class="form-register" action="{{url_for('funcionalidadbuscar')}}" method='POST'>
+        <h4>Buscar Libro</h4>
+        <input class="controls"type="text"  name="nombre_libro"   placeholder="Nombre del Libro">
+        <input class="button" type="submit" value="Introducir">   
+      </form>
+      <br><br>
+      <table>
+        <tr>
+          <th>Nombre del Libro</th>
+          <th>Nombre del autor</th>
+          <th>Nombre de la Editorial</th>
+          <th>Estilo</th>
+        </tr>
+        {% for resultHtml1 in resultHtml1 %}
+        <tr>
+          <td>{{resultHtml1[0]}}</td>
+          <td>{{resultHtml1[1]}}</td>
+          <td>{{resultHtml1[2]}}</td>
+          <td>{{resultHtml1[3]}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+<br><br>
+
+
+</body>
+<footer>
+<br><br>
+
+</footer>
+</html>

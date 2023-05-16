@@ -1,0 +1,142 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+body{
+
+    
+    background-image: linear-gradient(
+        135deg,#00B7D4, #505488, #2F3F80, #161569,
+        #5A4894,#A950A1, #FF7CAE);
+
+    background-size: 500% 500%;
+    animation: animacion 10s infinite;
+}
+
+@keyframes animacion{
+    0%{
+        background-position: 0% 50% ;
+    }
+    50%{
+        background-position: 100% 50% ;
+    }
+    100%{
+        background-position: 0% 50% ;
+    }
+}
+
+.form-register {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    
+    
+}
+
+.form-register a {
+    color:white;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.form-register .button{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 0px 0;
+    font-size: 16px;
+} 
+
+p.login_ok{
+    color: #008000;
+}
+
+p.login_ko{
+    color:red;
+}
+
+
+
+.button1 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+   }
+   
+.button1:active,
+.button1:hover {
+    outline: 0;
+   }
+   
+.button1 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+   }
+   
+.button1:hover span {
+    background: none;
+   }
+   
+.button1:active {
+    transform: scale(0.9);
+   }

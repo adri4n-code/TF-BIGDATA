@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleidentificacion.css') }}"/>
+    <title></title>
+    <link rel="icon" href="../static/logo1.1sinfondo.png">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form>
+            <div class="form-register">
+                    <img src="../static/logo1.1sinfondo.png" style= width:320px; height:120px; >
+                    <center>
+                    <button class= "button1">
+                        <span>
+                            <a href="{{url_for('login')}}" target="_blank" >LOG IN </a>
+                        </span>
+                    </button> 
+                    </center>
+        
+                    <br></br>
+                    
+                    <center>
+                     <button class= "button1" >
+                        <span>
+                            <a href="{{url_for('signin')}}" target="_blank" > SIGN IN </a>
+                        </span>
+                    </button>
+                    </center>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
